@@ -72,14 +72,7 @@ def logout():
 
 @app.route("/")  #the home page where the login button will be located
 def index():
-    # return "Hello World <a href='/login'><button>Login</button></a>"
     return render_template('login.html')
-
-
-# @app.route("/test-form")  #the home page where the login button will be located
-# def testlogin():
-    # form = MyForm()
-    # return render_template('login.html',form=form)
 
 @app.route("/protected_area")  #the page where only the authorized users can go to
 @login_is_required
